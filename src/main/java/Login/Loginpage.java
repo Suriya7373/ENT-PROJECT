@@ -43,8 +43,8 @@ Loginpage {
         //existingpatientappointment ExistingAppointment=new existingpatientappointment(driver);
         //ExistingAppointment.ExistingAppointment();
         //calling Triagemodule
-        //Triagemodule Triage=new Triagemodule(driver);
-        //Triage.Triage();
+        Triagemodule Triage=new Triagemodule(driver);
+        Triage.Triage();
         //consulting module
         consultingmodule consulting=new consultingmodule(driver);
         consulting.consulting();
