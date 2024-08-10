@@ -1,25 +1,29 @@
 package Base;
-import Login.Loginpage;
+import Login.Existingappointment;
+import Login.LoginThroughNewBaseMethod;
+//import Login.Loginpage;
+import Login.PatientvisitModule;
+import Login.TriageModule;
 import Menu.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 public class Baseconstructor {
     public static WebDriver driver;
     public Properties prop;
-
+    //Baseconstructor ClickUsingSendKeys;protected
     public Baseconstructor() {
         System.out.println("base Constructor");
         try {
-            File file = new File("D:\\ENT\\ENT-PROJECT\\src\\main\\resources\\Master.properties");
+            File file = new File("C:\\ENT-PROJECT\\ENT-PROJECT\\src\\main\\resources\\Master.properties");
 
             FileInputStream fileinput = new FileInputStream(file);
             prop = new Properties();
@@ -35,65 +39,44 @@ public class Baseconstructor {
         driver = new ChromeDriver();
     }
 
-    //@Test(enabled = true)
+    @Test
     public void Run() {
 
         //login page
-        try {
-            driver = new ChromeDriver();
-            Loginpage Setup = new Loginpage(driver);
-            // WebDriverWait wait=new WebDriverWait(driver,15);
-            Setup.Setup();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+       driver = new ChromeDriver();
 
-        //existing appoinmeent
 
-//        try {
-//            AppointmentModule Appointment = new AppointmentModule(driver);
-//
-//            Appointment.Appointment();
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+        LoginThroughNewBaseMethod MethodLoginPage = new LoginThroughNewBaseMethod(driver);
+
+        MethodLoginPage.MethodLoginPage();
+
+
+
+
 
         //put on existing patient appointment
-        try {
-            existingpatientappointment ExistingAppointment = new existingpatientappointment(driver);
+        //base.SleepMethod(5000);
+//        Existingappointment Appointment = new Existingappointment(driver);
+//        Appointment.Appointment();
 
-            ExistingAppointment.ExistingAppointment();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
         //calling to Patientvisit
 
-        try {
-            PatientvisitModule Patientvisit = new PatientvisitModule(driver);
+//        PatientvisitModule Patientvisit = new PatientvisitModule(driver);
+//        Patientvisit.Patientvisit();
 
-            Patientvisit.Patientvisit();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        //calling Triagemodule
-        try {
-            Triage TriageModule = new Triage(driver);
-
-            TriageModule.TriageModule();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        //consulting module
-        try {
-            consultingmodule consulting = new consultingmodule(driver);
-
-            consulting.consulting();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        //calling Triagemodule
+        TriageModule Triage = new TriageModule(driver);
+        Triage.Triage();
+        //
+//        //consulting module
+//        try {
+//            consultingmodule consulting = new consultingmodule(driver);
+//
+//            consulting.consulting();
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
 
 
     }
@@ -107,14 +90,14 @@ public class Baseconstructor {
     }
 
     public void ClickUsingWait(String xpath) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath))).click();
 
     }
 
 
     public void ClickUsingSendKeys(String xpath, String s) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath))).sendKeys(s);
 
 
@@ -137,11 +120,11 @@ public class Baseconstructor {
         }
     }
 
-    public void url;{
-
-        driver.get("https://entdemo.eblucare.com");
-
-    }
+//    public void url;{
+//
+//        driver.get("https://entdemo.eblucare.com");
+//
+//    }
 
 }
 

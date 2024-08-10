@@ -1,25 +1,161 @@
-//package Menu;
-//
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.JavascriptExecutor;
-//import static org.openqa.selenium.By.xpath;
-//public class PatientvisitModule {
-//    WebDriver driver;
-//
-//    public PatientvisitModule(WebDriver driver) {
-//
-//        this.driver = driver;
-//    }
-//
-//    public void Patientvisit() throws InterruptedException {
-//        Thread.sleep(10000);
-//        WebElement PatientvisitModule = driver.findElement(xpath("//div[normalize-space()='Patient Visit']"));
-//        PatientvisitModule.click();
-//
-//        //clicking on Requestsappointments
-//        Thread.sleep(5000);
-//        WebElement Requestsappointments = driver.findElement(xpath("//*[@id=\"Requests\"]"));
+package Login;
+
+import Base.Baseconstructor;
+import org.openqa.selenium.WebDriver;
+
+public class PatientvisitModule extends Baseconstructor {
+    public PatientvisitModule() {
+        System.out.println("PatientvisitModule");
+
+    }
+
+    public PatientvisitModule(WebDriver driver) {
+        System.out.println("appointment");
+
+        this.driver = driver;
+    }
+    public void Patientvisit() {
+        Baseconstructor base = new Baseconstructor();
+        base.SleepMethod(10000);
+        //Patientvisit
+        base.ClickUsingWait(base.prop.getProperty("Patientvisit"));
+
+        //Appointmet through  patientvisit
+        base.SleepMethod(20000);
+        base.ClickUsingWait(base.prop.getProperty("Appointment1"));
+
+        //Editeappointement
+        base.ClickUsingWait(base.prop.getProperty("Editeappointement"));
+
+        //clicking on the visittime
+        base.ClickUsingWait(base.prop.getProperty("visittime"));
+
+        //choosingtime
+        base.ClickUsingWait(base.prop.getProperty("choosingtime"));
+
+        //am/pm
+        base.ClickUsingWait(base.prop.getProperty("am/pm"));
+
+        //choosingtime1
+        //base.ClickUsingWait(base.prop.getProperty("time"));
+
+        //setpup the visittime
+        base.SleepMethod(10000);
+        base.ClickUsingWait(base.prop.getProperty("setvisittime"));
+
+        //clicking on closebutton
+        base.SleepMethod(10000);
+        base.ClickUsingWait(base.prop.getProperty("closebutton"));
+
+
+
+
+        // clicking on VisitTypedropdown
+        base.ClickUsingWait(base.prop.getProperty("VisitTypedropdown"));
+
+        //choosevisittype Unschedule
+        base.ClickUsingWait(base.prop.getProperty("choosevisittype"));
+
+        //clicking on RecordedDuringdropdown
+        base.ClickUsingWait(base.prop.getProperty("RecordedDuringdropdown"));
+
+        //chooseRecordedDuring
+        base.ClickUsingWait(base.prop.getProperty("chooseRecordedDuring"));
+
+        //choosing urgencydropdown
+        base.ClickUsingWait(base.prop.getProperty("urgencydropdown"));
+
+        //choosingurgency
+        base.ClickUsingWait(base.prop.getProperty("choosingurgency"));
+
+        //PatientArrivalCondition dropdown
+        base.ClickUsingWait(base.prop.getProperty("PatientArrivalCondition"));
+
+        //choosingPatientArrivalCondition
+        base.ClickUsingWait(base.prop.getProperty("choosingPatientArrivalCondition"));
+
+        //clicking on ToConsultdropdown
+        base.ClickUsingWait(base.prop.getProperty("ToConsultdropdown"));
+
+        //choosing on doctor
+        base.ClickUsingWait(base.prop.getProperty("ToConsultdropdown1"));
+
+        //consultingdoctor
+        base.ClickUsingWait(base.prop.getProperty("consultingdoctor"));
+
+        //choosingconsultingdoctor
+        base.ClickUsingWait(base.prop.getProperty("choosingconsultingdoctor"));
+
+        //consultigtype
+        base.ClickUsingWait(base.prop.getProperty("consultigtype"));
+
+        //choosingconsultigtype
+        base.ClickUsingWait(base.prop.getProperty("choosingconsultigtype"));
+
+        //ChiefComplaint textbox
+        base.ClickUsingSendKeys(base.prop.getProperty("ChiefComplaint"), "Fever");
+
+        //clicking on  VisitPayment
+        base.ClickUsingWait(base.prop.getProperty("VisitPayment"));
+
+        //clicking on close button
+        base.ClickUsingWait(base.prop.getProperty("closeVisitPaymentpopup"));
+
+        //clicking on back button
+        base.ClickUsingWait(base.prop.getProperty("backVisitPaymentpopup"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       // WebElement Requestsappointments = driver.findElement(xpath("//*[@id=\"Requests\"]"));
 //        Requestsappointments.click();
 //        //Editeappointement
 //        Thread.sleep(2000);
@@ -146,57 +282,7 @@
 //        WebElement back = driver.findElement(xpath("//*[text()=' Back ']"));
 //        back.click();
 //
-//
-////        //Payment
-////        //entering payment Department
-////        Thread.sleep(2000);
-////        WebElement Department = driver.findElement(xpath("//*[@formcontrolname=\"Department\"]"));
-////        Department.sendKeys("Ane");
-////
-////        //Choosingdepartment
-////        Thread.sleep(3000);
-////        WebElement Choosingdepartment = driver.findElement(xpath("//*[text()=\" Anesthesiology \"]"));
-////        Choosingdepartment.click();
-////
-////        //Entering BillingParticulars
-////        Thread.sleep(2000);
-////        WebElement BillingParticulars = driver.findElement(xpath("(//*[@ng-reflect-placeholder=\"Type and Select\"])[2]"));
-////        BillingParticulars.sendKeys("tes");
-////
-////        //ChossingBillingParticulars
-////        Thread.sleep(5000);
-////        WebElement ChossingBillingParticulars = driver.findElement(xpath("//*[text()=\" 123 test - sub test \"]"));
-////        ChossingBillingParticulars.click();
-////
-////
-////      //PaidAmount
-////        Thread.sleep(2000);
-////        WebElement PaidAmount = driver.findElement(xpath("//*[@formcontrolname=\"PaidAmount\"]"));
-////        PaidAmount.sendKeys("300");
-////
-////        //PaymentMode
-////        Thread.sleep(2000);
-////        WebElement PaymentMode = driver.findElement(xpath("//*[@formcontrolname=\"PaymentMode\"]"));
-////        PaymentMode.click();
-////
-////        //choosingPaymentMode
-////        Thread.sleep(5000);
-////        WebElement choosingPaymentMode = driver.findElement(xpath("//*[text()=\" Cash In Hand \"]"));
-////        choosingPaymentMode.click();
-////
-////        //clicking on save button
-////        Thread.sleep(5000);
-////        WebElement save = driver.findElement(xpath("//*[text()=\" Save \"]"));
-////        save.click();
-////
-////
-////
-////
-//
-//
-//
-//
-//
-//    }
-//
-//}
+
+
+    }
+}
