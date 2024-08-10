@@ -1,7 +1,5 @@
 package Base;
 import Login.*;
-//import Login.Loginpage;
-import Menu.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -16,10 +14,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
+import org.openqa.selenium.WebElement;
 public class Baseconstructor {
     public static WebDriver driver;
     public Properties prop;
-
     //Baseconstructor ClickUsingSendKeys;protected
     public Baseconstructor() {
         System.out.println("base Constructor");
@@ -50,12 +48,12 @@ public class Baseconstructor {
         MethodLoginPage.MethodLoginPage();
 
         //put on existing patient appointment
-//        Existingappointment Appointment = new Existingappointment(driver);
+//           Existingappointment Appointment = new Existingappointment(driver);
 //            Appointment.Appointment();
             //calling to Patientvisit
 //             PatientvisitModule Patientvisit = new PatientvisitModule(driver);
 //              Patientvisit.Patientvisit();
-//              //calling Triagemodule
+              //calling Triagemodule
 //             TriageModule Triage = new TriageModule(driver);
 //              Triage.Triage();
               //consulting module
@@ -65,11 +63,14 @@ public class Baseconstructor {
 
     }
 
-    public void Click() {
+    public void Click(String xpath) {
+        WebElement element = driver.findElement(By.xpath(xpath));
+        element.click();
 
     }
 
     public void Sendkeys() {
+
 
     }
 

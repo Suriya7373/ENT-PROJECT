@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 
-import static jdk.internal.org.jline.utils.Colors.s;
+
 
 public class LoginThroughNewBaseMethod extends Baseconstructor  {
     //WebDriver driver;
@@ -31,7 +31,7 @@ public class LoginThroughNewBaseMethod extends Baseconstructor  {
         base.ClickUsingSendKeys(base.prop.getProperty("username"), "bluehospital@eblucare.com");
         base.ClickUsingSendKeys(base.prop.getProperty("password"), "Welcome@123");
         base.ClickUsingWait(base.prop.getProperty("signinbtn"));
-        base.takeScreenshot("Login");
+        //base.takeScreenshot("Login");
 
 
     }

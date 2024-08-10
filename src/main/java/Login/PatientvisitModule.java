@@ -4,6 +4,9 @@ import Base.Baseconstructor;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
+
 
 public class PatientvisitModule extends Baseconstructor {
     public PatientvisitModule() {
@@ -16,6 +19,7 @@ public class PatientvisitModule extends Baseconstructor {
 
         this.driver = driver;
     }
+
     public void Patientvisit() {
         Baseconstructor base = new Baseconstructor();
         base.SleepMethod(10000);
@@ -38,147 +42,119 @@ public class PatientvisitModule extends Baseconstructor {
         //am/pm
         base.ClickUsingWait(base.prop.getProperty("am/pm"));
 
-        //choosingtime1
-        //base.ClickUsingWait(base.prop.getProperty("time"));
-
         //setpup the visittime
-        base.SleepMethod(10000);
-        base.ClickUsingWait(base.prop.getProperty("setvisittime"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("setvisittime"));
 
         //clicking on closebutton
-        base.SleepMethod(10000);
-
-            int attempts = 0;
-            while(attempts < 3) {
-                try {
-                    base.ClickUsingWait(base.prop.getProperty("closebutton"));
-                    break;
-                } catch(ElementClickInterceptedException e) {
-
-                    attempts++;
-                }
-            }
-        //clicking on closebutton2
-        base.SleepMethod(10000);
-
-        while(attempts < 3) {
+        base.SleepMethod(5000);
+        int attempts = 0;
+        while (attempts < 3) {
             try {
-        base.ClickUsingWait(base.prop.getProperty("closebutton2"));
+                base.Click(base.prop.getProperty("closebutton"));
                 break;
-            } catch(ElementClickInterceptedException e) {
+            } catch (ElementClickInterceptedException e) {
 
                 attempts++;
             }
-        }
+            }
+        //close2
+        base.SleepMethod(3000);
+        //base.Click(base.prop.getProperty("closebutton2"));
+        base.ClickUsingWait(base.prop.getProperty("closebutton2"));
 
 
 
-        // clicking on VisitTypedropdown
-        base.ClickUsingWait(base.prop.getProperty("VisitTypedropdown"));
+//        int attempts = 0;
+//        while (attempts < 3) {
+//            try {
+//                base.ClickUsingWait(base.prop.getProperty("closebutton"));
+//                break;
+//            } catch (ElementClickInterceptedException e) {
+//
+//                attempts++;
+//            }
+//            }
+//        base.SleepMethod(10000);
+//       // base.ClickUsingWait(base.prop.getProperty("closebutton2"));
+//        try {
+//            base.ClickUsingWait(base.prop.getProperty("closebutton2"));
+//        }
+//        catch (ElementClickInterceptedException A){
+//            System.out.println("error message"+A.getMessage());
+//        }
+            //clicking on closebutton2
+//        base.SleepMethod(10000);
+//
+//        while(attempts < 3) {
+//            try {
+//        base.ClickUsingWait(base.prop.getProperty("closebutton2"));
+//                break;
+//            } catch(ElementClickInterceptedException e) {
+//
+//                attempts++;
+//            }
+//        }
 
-        //choosevisittype Unschedule
-        base.ClickUsingWait(base.prop.getProperty("choosevisittype"));
 
-        //clicking on RecordedDuringdropdown
-        base.ClickUsingWait(base.prop.getProperty("RecordedDuringdropdown"));
+            // clicking on VisitTypedropdown
+         base.SleepMethod(3000);
 
-        //chooseRecordedDuring
-        base.ClickUsingWait(base.prop.getProperty("chooseRecordedDuring"));
+            base.ClickUsingWait(base.prop.getProperty("VisitTypedropdown"));
 
-        //choosing urgencydropdown
-        base.ClickUsingWait(base.prop.getProperty("urgencydropdown"));
+            //choosevisittype Unschedule
+            base.ClickUsingWait(base.prop.getProperty("choosevisittype"));
 
-        //choosingurgency
-        base.ClickUsingWait(base.prop.getProperty("choosingurgency"));
+            //clicking on RecordedDuringdropdown
+            base.ClickUsingWait(base.prop.getProperty("RecordedDuringdropdown"));
 
-        //PatientArrivalCondition dropdown
-        base.ClickUsingWait(base.prop.getProperty("PatientArrivalCondition"));
+            //chooseRecordedDuring
+            base.ClickUsingWait(base.prop.getProperty("chooseRecordedDuring"));
 
-        //choosingPatientArrivalCondition
-        base.ClickUsingWait(base.prop.getProperty("choosingPatientArrivalCondition"));
+            //choosing urgencydropdown
+            base.ClickUsingWait(base.prop.getProperty("urgencydropdown"));
 
-        //clicking on ToConsultdropdown
-        base.ClickUsingWait(base.prop.getProperty("ToConsultdropdown"));
+            //choosingurgency
+            base.ClickUsingWait(base.prop.getProperty("choosingurgency"));
 
-        //choosing on doctor
-        base.ClickUsingWait(base.prop.getProperty("ToConsultdropdown1"));
+            //PatientArrivalCondition dropdown
+            base.ClickUsingWait(base.prop.getProperty("PatientArrivalCondition"));
 
-        //consultingdoctor
-        base.ClickUsingWait(base.prop.getProperty("consultingdoctor"));
+            //choosingPatientArrivalCondition
+            base.ClickUsingWait(base.prop.getProperty("choosingPatientArrivalCondition"));
 
-        //choosingconsultingdoctor
-        base.ClickUsingWait(base.prop.getProperty("choosingconsultingdoctor"));
+            //clicking on ToConsultdropdown
+            base.ClickUsingWait(base.prop.getProperty("ToConsultdropdown"));
 
-        //consultigtype
-        base.ClickUsingWait(base.prop.getProperty("consultigtype"));
+            //choosing on doctor
+            base.ClickUsingWait(base.prop.getProperty("ToConsultdropdown1"));
 
-        //choosingconsultigtype
-        base.ClickUsingWait(base.prop.getProperty("choosingconsultigtype"));
+            //consultingdoctor
+            base.ClickUsingWait(base.prop.getProperty("consultingdoctor"));
 
-        //ChiefComplaint textbox
-        base.ClickUsingSendKeys(base.prop.getProperty("ChiefComplaint"), "Fever");
+            //choosingconsultingdoctor
+            base.ClickUsingWait(base.prop.getProperty("choosingconsultingdoctor"));
 
-        //clicking on  VisitPayment
-        base.ClickUsingWait(base.prop.getProperty("VisitPayment"));
+            //consultigtype
+            base.ClickUsingWait(base.prop.getProperty("consultigtype"));
 
-        //clicking on close button
-        base.ClickUsingWait(base.prop.getProperty("closeVisitPaymentpopup"));
+            //choosingconsultigtype
+            base.ClickUsingWait(base.prop.getProperty("choosingconsultigtype"));
 
-        //clicking on back button
-        base.ClickUsingWait(base.prop.getProperty("backVisitPaymentpopup"));
+            //ChiefComplaint textbox
+            base.ClickUsingSendKeys(base.prop.getProperty("ChiefComplaint"), "Fever");
 
+            //clicking on  VisitPayment
+            base.ClickUsingWait(base.prop.getProperty("VisitPayment"));
 
+            //clicking on close button
+            base.ClickUsingWait(base.prop.getProperty("closeVisitPaymentpopup"));
 
+            //clicking on back button
+            base.ClickUsingWait(base.prop.getProperty("backVisitPaymentpopup"));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       // WebElement Requestsappointments = driver.findElement(xpath("//*[@id=\"Requests\"]"));
+            // WebElement Requestsappointments = driver.findElement(xpath("//*[@id=\"Requests\"]"));
 //        Requestsappointments.click();
 //        //Editeappointement
 //        Thread.sleep(2000);
@@ -307,5 +283,6 @@ public class PatientvisitModule extends Baseconstructor {
 //
 
 
+        }
     }
-}
+

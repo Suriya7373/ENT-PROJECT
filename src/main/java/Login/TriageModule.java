@@ -19,9 +19,10 @@ public class TriageModule extends Baseconstructor {
         base.ClickUsingWait(base.prop.getProperty("TriageModule"));
         //Searching on patient name
         base.SleepMethod(10000);
-        base.ClickUsingSendKeys(base.prop.getProperty("Patientname"), "Rabin");
+        base.ClickUsingSendKeys(base.prop.getProperty("Patientname"), "eve");
         //clicking on Rabinpatient
-        base.ClickUsingWait(base.prop.getProperty("Rabinpatient"));
+        base.SleepMethod(5000);
+        base.ClickUsingWait(base.prop.getProperty("evepatient"));
         //searchpatient
         base.ClickUsingWait(base.prop.getProperty("searchpatient"));
         ////Editetriage
@@ -39,7 +40,7 @@ public class TriageModule extends Baseconstructor {
 
         //Entering vitals data
         // choosing RecordedBy
-        base.SleepMethod(50000);
+        base.SleepMethod(5000);
         base.ClickUsingWait(base.prop.getProperty("RecordedBy"));
         //choosing recodrded by doctorname
         base.ClickUsingWait(base.prop.getProperty("doctorname"));
@@ -58,36 +59,41 @@ public class TriageModule extends Baseconstructor {
         //clicking on close button
         base.ClickUsingWait(base.prop.getProperty("close1"));
         //clicking on next button
-        base.ClickUsingWait(base.prop.getProperty("next1"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next1"));
 
         //Allergy module
         //choosing RecordedBy
-        base.ClickUsingWait(base.prop.getProperty("RecordedBy2"));
-        //choosing recodrded by doctorname
-        base.ClickUsingWait(base.prop.getProperty("doctorname2"));
-        //Enter allergyname
-        base.ClickUsingSendKeys(base.prop.getProperty("allergyname"), "pollan");
-        //clicking on save button
-        base.ClickUsingWait(base.prop.getProperty("save2"));
-        //clicking the close button
-        base.ClickUsingWait(base.prop.getProperty("close2"));
+//        base.ClickUsingWait(base.prop.getProperty("RecordedBy2"));
+//        //choosing recodrded by doctorname
+//        base.ClickUsingWait(base.prop.getProperty("doctorname2"));
+//        //Enter allergyname
+//        base.ClickUsingSendKeys(base.prop.getProperty("allergyname"), "pollan");
+//        //clicking on save button
+//        base.ClickUsingWait(base.prop.getProperty("save2"));
+//        //clicking the close button
+//        base.ClickUsingWait(base.prop.getProperty("close2"));
+//        //clicking the next2 button
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next2"));
+
+
+        //        //adding Problem list
+//        //choosing RecordedBy
+//        base.ClickUsingWait(base.prop.getProperty("RecordedBy3"));
+//        //choosing recodrded by doctorname3
+//        base.ClickUsingWait(base.prop.getProperty("doctorname3"));
+//        //choosing problemtype
+//        base.ClickUsingWait(base.prop.getProperty("problemtype"));
+//        //choosing particular problem type
+//        base.ClickUsingWait(base.prop.getProperty("Hearingloss"));
+//        //clicking on save button
+//        base.ClickUsingWait(base.prop.getProperty("save3"));
+//        //clicking the close button
+//        base.ClickUsingWait(base.prop.getProperty("close3"));
         //clicking the next2 button
-        base.ClickUsingWait(base.prop.getProperty("next2"));
-        //adding Problem list
-        //choosing RecordedBy
-        base.ClickUsingWait(base.prop.getProperty("RecordedBy3"));
-        //choosing recodrded by doctorname3
-        base.ClickUsingWait(base.prop.getProperty("doctorname3"));
-        //choosing problemtype
-        base.ClickUsingWait(base.prop.getProperty("problemtype"));
-        //choosing particular problem type
-        base.ClickUsingWait(base.prop.getProperty("Hearingloss"));
-        //clicking on save button
-        base.ClickUsingWait(base.prop.getProperty("save3"));
-        //clicking the close button
-        base.ClickUsingWait(base.prop.getProperty("close3"));
-        //clicking the next2 button
-        base.ClickUsingWait(base.prop.getProperty("next3"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next3"));
 
         //adding drug
         //choosing RecordedBy
@@ -103,9 +109,11 @@ public class TriageModule extends Baseconstructor {
         //choosing Routeoral
         base.ClickUsingWait(base.prop.getProperty("Routeoral"));
         //Choosing Diagnosis
-        base.ClickUsingSendKeys(base.prop.getProperty("Diagnosis"), "fever");
+        base.SleepMethod(5000);
+        base.ClickUsingSendKeys(base.prop.getProperty("Diagnosis"), "A");
         //choosing feverdiagnosis
-        base.ClickUsingWait(base.prop.getProperty("feverdiagnosis"));
+        base.SleepMethod(5000);
+        base.ClickUsingWait(base.prop.getProperty("A"));
         //Entering total qutanity
         base.ClickUsingSendKeys(base.prop.getProperty("qutanity"), "10");
         //entering totaldays
@@ -121,7 +129,8 @@ public class TriageModule extends Baseconstructor {
         //clicking the close button
         base.ClickUsingWait(base.prop.getProperty("close4"));
         //clicking the next2 button
-        base.ClickUsingWait(base.prop.getProperty("next4"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next4"));
 
         //adding socialhistory
         base.ClickUsingWait(base.prop.getProperty("RecordedBy5"));
@@ -144,7 +153,8 @@ public class TriageModule extends Baseconstructor {
         //clicking the close button
         base.ClickUsingWait(base.prop.getProperty("close5"));
         //clicking the next2 button
-        base.ClickUsingWait(base.prop.getProperty("next5"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next5"));
 
         //ROS
         base.ClickUsingWait(base.prop.getProperty("RecordedBy6"));
@@ -165,7 +175,8 @@ public class TriageModule extends Baseconstructor {
         //clicking the close button
         base.ClickUsingWait(base.prop.getProperty("close6"));
         //clicking the next2 button
-        base.ClickUsingWait(base.prop.getProperty("next6"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next6"));
 
         //adding Nutrition
         base.ClickUsingWait(base.prop.getProperty("RecordedBy7"));
@@ -176,7 +187,8 @@ public class TriageModule extends Baseconstructor {
         //clicking the close button
         base.ClickUsingWait(base.prop.getProperty("close7"));
         //clicking the next2 button
-        base.ClickUsingWait(base.prop.getProperty("next7"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next7"));
 
         //Adding FunctionalCognitive
         //adding Nutrition
@@ -186,9 +198,13 @@ public class TriageModule extends Baseconstructor {
         //clicking on save button
         base.ClickUsingWait(base.prop.getProperty("save8"));
         //clicking the close button
+        base.SleepMethod(2000);
         base.ClickUsingWait(base.prop.getProperty("close8"));
         //clicking the next2 button
-        base.ClickUsingWait(base.prop.getProperty("next8"));
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("next8"));
+
+
         //NursingSignOff
         base.ClickUsingWait(base.prop.getProperty("RecordedBy9"));
         //choosing recodrded by doctorname3
@@ -196,8 +212,9 @@ public class TriageModule extends Baseconstructor {
         //clicking on save button
         base.ClickUsingWait(base.prop.getProperty("save9"));
         //clicking the close button
-        base.ClickUsingWait(base.prop.getProperty("close9"));
-        base.ClickUsingWait(base.prop.getProperty("close9"));
+        base.SleepMethod(2000);
+        base.Click(base.prop.getProperty("close9"));
+
         //Entering username
         base.ClickUsingSendKeys(base.prop.getProperty("username1"), "bluehospital@eblucare.com");
         //Entering password
@@ -208,6 +225,10 @@ public class TriageModule extends Baseconstructor {
         base.ClickUsingWait(base.prop.getProperty("yes"));
         //clicking on close button
         base.ClickUsingWait(base.prop.getProperty("close10"));
+
+        //moving to back button
+        base.SleepMethod(3000);
+        base.Click(base.prop.getProperty("movingtobackbutton"));
 
 
     }

@@ -42,7 +42,7 @@ public  class Existingappointment extends Baseconstructor {
             //clicking on existing patient
             base.ClickUsingWait(base.prop.getProperty("Existingpatient"));
             //searching existing patient
-            base.ClickUsingSendKeys(base.prop.getProperty("searchingexistingpatient"), "Rabin");
+            base.ClickUsingSendKeys(base.prop.getProperty("searchingexistingpatient"), "eve");
             //clcking on searching patient
             base.ClickUsingWait(base.prop.getProperty("clckingpatient"));
             //Searchphysician
