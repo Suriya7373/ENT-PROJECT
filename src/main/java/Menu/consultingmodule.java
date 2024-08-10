@@ -129,7 +129,7 @@ public class consultingmodule {
 
         //choosing problemstatusdropdown
         Thread.sleep(5000);
-        WebElement problemstatusdropdown=driver.findElement(xpath("//*[@id=\"mat-select-12\"]"));
+        WebElement problemstatusdropdown=driver.findElement(xpath("//*[@formcontrolname=\"ProblemStatus\"]"));
         problemstatusdropdown.click();
 
         //choosing problemstatus
@@ -233,7 +233,7 @@ public class consultingmodule {
 
 
         ////moving e-Prescription
-        Thread.sleep(100000);
+        Thread.sleep(20000);
         WebElement Prescription=driver.findElement(xpath("//*[text()\\=\"e-Prescription\"]"));
         Prescription.click();
 

@@ -23,12 +23,12 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<!--        <dependency>-->
-<!--            <groupId>org.testng</groupId>-->
-<!--            <artifactId>testng</artifactId>-->
-<!--            <version>7.10.2</version>-->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
 
-<!--        </dependency>-->
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/junit/junit-dep -->
         <dependency>
@@ -67,6 +67,24 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.23.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>4.23.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
             <version>4.23.1</version>
             <scope>compile</scope>
         </dependency>

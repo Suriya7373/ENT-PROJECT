@@ -1,28 +1,60 @@
 package Menu;
 import static org.openqa.selenium.By.*;
+import Base.Baseconstructor;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.By;
+
+import java.sql.DriverManager;
+import java.time.Duration;
+
 import static org.openqa.selenium.By.xpath;
 
-public class AppointmentModule {
+public class AppointmentModule   {
     WebDriver driver;
 
     public AppointmentModule(WebDriver driver) {
 
         this.driver = driver;
     }
-    public void Appointment() throws InterruptedException {
+    public void Appointment()  throws InterruptedException {
 
         //Appointment module
-         Thread.sleep(5000);
-         WebElement PatientAppointment = driver.findElement(xpath("//div[normalize-space()='Appointments']"));
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement PatientAppointment = driver.findElement(xpath("//div[normalize-space()='Appointments']"));
          PatientAppointment.click();
+
+         Baseconstructor baseObj=new Baseconstructor();
+
+        WebDriverWait wait=new WebDriverWait(Baseconstructor.driver, Duration.ofSeconds(30));
+
+
+        Boolean value=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[@class=\"dx-button-text\"])[1]"))).isSelected();
+
+        System.out.println("Element is clickable : " +value);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class=\"dx-button-text\"])[1]"))).click();
 
          //Appointmentcalender
         Thread.sleep(5000);
-          WebElement calendar= driver.findElement(xpath("(//*[@class=\"dx-button-text\"])[1]"));
-          calendar.click();
+          /*WebElement calendar= driver.findElement(xpath("(//*[@class=\"dx-button-text\"])[1]"));
+          calendar.click();*/
+
+//        baseObj.click("(//*[@class=\\\"dx-button-text\\\"])[1]\"");
+//        baseObj.sendkeys("(//*[@class=\\\"dx-button-text\\\"])[1]\")
+//        baseObj.click("//*[@class=\\\"dx-button-text\\\"])[1]\");
+//             //   baseObj.
+//
+//        baseObj.DDValue("","India");
+
 
           //Clicking on appointmentlist
         Thread.sleep(5000);
@@ -75,6 +107,7 @@ public class AppointmentModule {
         //Chossing Facility
         WebElement Facility= driver.findElement(xpath("//*[@ng-reflect-name=\"FacilityName\"]"));
         Facility.click();
+
 
         //Chossing Facility name
         WebElement Facilityname= driver.findElement(xpath("(//span[@class=\"mat-option-text\"])[1]"));
