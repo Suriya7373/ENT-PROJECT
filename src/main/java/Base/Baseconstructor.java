@@ -24,7 +24,7 @@ public class Baseconstructor {
     public Baseconstructor() {
         System.out.println("base Constructor");
         try {
-            File file = new File("D:\\ENT\\ENT-PROJECT\\src\\main\\resources\\Master.properties");
+            File file = new File("C:\\ENT-PROJECT\\ENT-PROJECT\\src\\main\\resources\\Master.properties");
 
             FileInputStream fileinput = new FileInputStream(file);
             prop = new Properties();
@@ -53,11 +53,11 @@ public class Baseconstructor {
 //        Existingappointment Appointment = new Existingappointment(driver);
 //            Appointment.Appointment();
             //calling to Patientvisit
-             PatientvisitModule Patientvisit = new PatientvisitModule(driver);
-              Patientvisit.Patientvisit();
-              //calling Triagemodule
-             TriageModule Triage = new TriageModule(driver);
-              Triage.Triage();
+//             PatientvisitModule Patientvisit = new PatientvisitModule(driver);
+//              Patientvisit.Patientvisit();
+//              //calling Triagemodule
+//             TriageModule Triage = new TriageModule(driver);
+//              Triage.Triage();
               //consulting module
              ConsultingModule Consulting = new ConsultingModule(driver);
              Consulting.Consulting();

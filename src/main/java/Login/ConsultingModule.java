@@ -50,6 +50,7 @@ public class ConsultingModule extends Baseconstructor {
         base.ClickUsingWait(base.prop.getProperty("choosingchoosingprobelmlocation"));
 
         //clicking outside to updatethe previous value
+        base.SleepMethod(3000);
         base.ClickUsingWait(base.prop.getProperty("updatethepreviousvalue"));
         //Entering problemduration
         base.ClickUsingSendKeys(base.prop.getProperty("problemduration"), "1");
@@ -60,14 +61,18 @@ public class ConsultingModule extends Baseconstructor {
 
         //clicking outside to updatethepreviousvalue
         //       try {
-//           WebElement outside1=driver.findElement(xpath("//*[@class=\"cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing\"]"));
+ //         WebElement outside1=driver.findElement(xpath("//*[@class=\"cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing\"]"));
 //           JavascriptExecutor js = (JavascriptExecutor) driver;
 //           js.executeScript("arguments[0].click();", outside1);
-//           outside1.click();
+ //          outside1.click();
 //       }
 //       catch (StaleElementReferenceException E){
 //           System.out.println("error message"+E.getMessage());
 //       }
+
+
+        //clicking on outside
+        base.ClickUsingWait(base.prop.getProperty("outside"));
         //choosing problemtype
         base.ClickUsingWait(base.prop.getProperty("problemtype1"));
         //choosing problem type hearingloss
@@ -84,6 +89,9 @@ public class ConsultingModule extends Baseconstructor {
 //        catch (StaleElementReferenceException A){
 //            System.out.println("error message"+A.getMessage());
 //        }
+
+        //clickoing on outside2
+        base.ClickUsingWait(base.prop.getProperty("outside2"));
         //scrolldown
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,100)");
@@ -93,9 +101,9 @@ public class ConsultingModule extends Baseconstructor {
         base.ClickUsingWait(base.prop.getProperty("choosingproblemstatus"));
 
         //choosing save button
-        base.ClickUsingWait(base.prop.getProperty("save"));
+        base.ClickUsingWait(base.prop.getProperty("save10"));
         //choosing close button
-        base.ClickUsingWait(base.prop.getProperty("close"));
+        base.ClickUsingWait(base.prop.getProperty("close11"));
 
 
         //moving to careplanepage
@@ -119,9 +127,9 @@ public class ConsultingModule extends Baseconstructor {
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,150)");
         //clicking on save button
-        base.ClickUsingWait(base.prop.getProperty("save10"));
+        base.ClickUsingWait(base.prop.getProperty("save11"));
         //clicking on close button
-        base.ClickUsingWait(base.prop.getProperty("close11"));
+        base.ClickUsingWait(base.prop.getProperty("close12"));
 
 
         //moving to careplanepage
@@ -130,9 +138,9 @@ public class ConsultingModule extends Baseconstructor {
         //choosing doctor NareshSharma
         base.ClickUsingWait(base.prop.getProperty("NareshSharma11"));
         //choosing save button
-        base.ClickUsingWait(base.prop.getProperty("save11"));
+        base.ClickUsingWait(base.prop.getProperty("save12"));
         //choosing close button
-        base.ClickUsingWait(base.prop.getProperty("close12"));
+        base.ClickUsingWait(base.prop.getProperty("close13"));
 
 
 

@@ -73,7 +73,6 @@ public class PatientvisitModule extends Baseconstructor {
 
 
 
-
         // clicking on VisitTypedropdown
         base.ClickUsingWait(base.prop.getProperty("VisitTypedropdown"));
 
