@@ -50,10 +50,10 @@ public class Baseconstructor {
         //put on existing patient appointment
 //           Existingappointment Appointment = new Existingappointment(driver);
 //            Appointment.Appointment();
-            //calling to Patientvisit
+           // calling to Patientvisit
 //             PatientvisitModule Patientvisit = new PatientvisitModule(driver);
 //              Patientvisit.Patientvisit();
-              //calling Triagemodule
+             // calling Triagemodule
 //             TriageModule Triage = new TriageModule(driver);
 //              Triage.Triage();
               //consulting module

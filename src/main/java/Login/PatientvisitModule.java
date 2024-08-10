@@ -1,11 +1,7 @@
 package Login;
 
 import Base.Baseconstructor;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
+import org.openqa.selenium.*;
 
 
 public class PatientvisitModule extends Baseconstructor {
@@ -48,56 +44,27 @@ public class PatientvisitModule extends Baseconstructor {
 
         //clicking on closebutton
         base.SleepMethod(5000);
-        int attempts = 0;
-        while (attempts < 3) {
-            try {
-                base.Click(base.prop.getProperty("closebutton"));
-                break;
-            } catch (ElementClickInterceptedException e) {
 
-                attempts++;
-            }
-            }
-        //close2
+       // base.Click(base.prop.getProperty("closebutton"));
+
+        base.SleepMethod(5000);
+        try {
+            WebElement closebutton = driver.findElement(By.xpath("(//*[text()='Close'])[1]"));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", closebutton);
+            closebutton.click();
+        }
+        catch (StaleElementReferenceException A){
+            System.out.println("error message"+A.getMessage());
+        }
         base.SleepMethod(3000);
-        //base.Click(base.prop.getProperty("closebutton2"));
-        base.ClickUsingWait(base.prop.getProperty("closebutton2"));
+        WebElement closebutton1 = driver.findElement(By.xpath("(//*[text()='Close'])[1]"));
+        closebutton1.click();
 
 
 
-//        int attempts = 0;
-//        while (attempts < 3) {
-//            try {
-//                base.ClickUsingWait(base.prop.getProperty("closebutton"));
-//                break;
-//            } catch (ElementClickInterceptedException e) {
-//
-//                attempts++;
-//            }
-//            }
-//        base.SleepMethod(10000);
-//       // base.ClickUsingWait(base.prop.getProperty("closebutton2"));
-//        try {
-//            base.ClickUsingWait(base.prop.getProperty("closebutton2"));
-//        }
-//        catch (ElementClickInterceptedException A){
-//            System.out.println("error message"+A.getMessage());
-//        }
-            //clicking on closebutton2
-//        base.SleepMethod(10000);
-//
-//        while(attempts < 3) {
-//            try {
-//        base.ClickUsingWait(base.prop.getProperty("closebutton2"));
-//                break;
-//            } catch(ElementClickInterceptedException e) {
-//
-//                attempts++;
-//            }
-//        }
 
-
-            // clicking on VisitTypedropdown
+        // clicking on VisitTypedropdown
          base.SleepMethod(3000);
 
             base.ClickUsingWait(base.prop.getProperty("VisitTypedropdown"));

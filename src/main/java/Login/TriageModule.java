@@ -40,24 +40,24 @@ public class TriageModule extends Baseconstructor {
 
         //Entering vitals data
         // choosing RecordedBy
-        base.SleepMethod(5000);
-        base.ClickUsingWait(base.prop.getProperty("RecordedBy"));
-        //choosing recodrded by doctorname
-        base.ClickUsingWait(base.prop.getProperty("doctorname"));
-        //Entering Hight
-        base.ClickUsingSendKeys(base.prop.getProperty("Hight"), "160");
-        //entering Weight
-        base.ClickUsingSendKeys(base.prop.getProperty("Weight"), "80");
-        //Entering Temperature
-        base.ClickUsingSendKeys(base.prop.getProperty("Temperature"), "90");
-        //choose patient diabetic yes/no
-        base.ClickUsingWait(base.prop.getProperty("diabetic"));
-        //choosing bloodpressure yes/no
-        base.ClickUsingWait(base.prop.getProperty("bloodpressure"));
-        //clicking on save button
-        base.ClickUsingWait(base.prop.getProperty("save1"));
-        //clicking on close button
-        base.ClickUsingWait(base.prop.getProperty("close1"));
+//        base.SleepMethod(5000);
+//        base.ClickUsingWait(base.prop.getProperty("RecordedBy"));
+//        //choosing recodrded by doctorname
+//        base.ClickUsingWait(base.prop.getProperty("doctorname"));
+//        //Entering Hight
+//        base.ClickUsingSendKeys(base.prop.getProperty("Hight"), "160");
+//        //entering Weight
+//        base.ClickUsingSendKeys(base.prop.getProperty("Weight"), "80");
+//        //Entering Temperature
+//        base.ClickUsingSendKeys(base.prop.getProperty("Temperature"), "90");
+//        //choose patient diabetic yes/no
+//        base.ClickUsingWait(base.prop.getProperty("diabetic"));
+//        //choosing bloodpressure yes/no
+//        base.ClickUsingWait(base.prop.getProperty("bloodpressure"));
+//        //clicking on save button
+//        base.ClickUsingWait(base.prop.getProperty("save1"));
+//        //clicking on close button
+//        base.ClickUsingWait(base.prop.getProperty("close1"));
         //clicking on next button
         base.SleepMethod(3000);
         base.Click(base.prop.getProperty("next1"));
@@ -101,10 +101,13 @@ public class TriageModule extends Baseconstructor {
         //choosing recodrded by doctorname3
         base.ClickUsingWait(base.prop.getProperty("doctorname4"));
         //searching on drugname
+        base.SleepMethod(2000);
         base.ClickUsingSendKeys(base.prop.getProperty("drugname"), "dolo");
         //clicking on drugname
+        base.SleepMethod(2000);
         base.ClickUsingWait(base.prop.getProperty("clickingdrugname"));
         //choosing Route
+        base.SleepMethod(2000);
         base.ClickUsingWait(base.prop.getProperty("Route"));
         //choosing Routeoral
         base.ClickUsingWait(base.prop.getProperty("Routeoral"));
