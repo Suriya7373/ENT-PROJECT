@@ -1,8 +1,13 @@
 package Menu;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.CdpVersionFinder;
+import org.openqa.selenium.JavascriptExecutor;
 
+import java.util.List;
+import java.util.Optional;
 import java.time.Duration;
 
 import static org.openqa.selenium.By.xpath;
@@ -37,34 +42,93 @@ public class consultingmodule {
         searchpatient1.click();
 
         //Editeconsulting
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         WebElement Editeconsulting=driver.findElement(xpath("//*[@class=\"footerIcons\"]"));
         Editeconsulting.click();
 
         //choosing RecordedBy
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         WebElement RecordedBy=driver.findElement(xpath("//*[@formcontrolname=\"RecordedBy1\"]"));
         RecordedBy.click();
 
         //choosing doctor NareshSharma
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         WebElement NareshSharma=driver.findElement(xpath("//*[text()=\"Naresh  Sharma\"]"));
         NareshSharma.click();
 
         //choosingprobelmlocation
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         WebElement probelmlocation=driver.findElement(xpath("//*[@formcontrolname=\"ProblemAreaID\"]"));
         probelmlocation.click();
 
         //choosingchoosingprobelmlocation
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         WebElement choosingchoosingprobelmlocation=driver.findElement(xpath("(//*[text()=\"Otosclerosis\"])[1]"));
         choosingchoosingprobelmlocation.click();
 
+        //clicking outside to updatethe previous value
+        Thread.sleep(2000);
+        WebElement outside=driver.findElement(xpath("//*[@class=\"cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing\"]"));
+        outside.click();
+
        //Entering problemduration
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         WebElement problemduration=driver.findElement(xpath("//*[@formcontrolname=\"ProblemDuration\"]"));
         problemduration.sendKeys("1");
+
+        //choosing problem symptomsdropdown
+        Thread.sleep(3000);
+        WebElement symbtomsdropdown=driver.findElement(xpath("//*[@formcontrolname=\"SymptomsID\"]"));
+        symbtomsdropdown.click();
+
+        //choosing symptoms
+        Thread.sleep(2000);
+        WebElement symptoms=driver.findElement(xpath("//*[text()=\"Fussiness \"]"));
+        symptoms.click();
+
+        //clicking outside to updatethe previous value
+//        Thread.sleep(5000);
+//        WebElement outside1= (WebElement) driver.findElements(xpath("//*[@class=\"cdk-overlay-connected-position-bounding-box\"]"));
+        outside1.click();
+//        Thread.sleep(3000);
+//        List<WebElement> elements = driver.findElements(By.xpath("//*[@class=\"cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing\"]"));
+//        WebElement element = elements.get(0);
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("arguments[0].click();", element);
+//        element.click();
+
+
+        //choosing problemtype
+        Thread.sleep(5000);
+        WebElement choosingproblemtype=driver.findElement(xpath("(//*[@class=\"mat-select-value\"])[5]"));
+        choosingproblemtype.click();
+
+        //choosing problem type hearingloss
+        Thread.sleep(3000);
+        WebElement hearingloss=driver.findElement(xpath("(//*[text()=\"Hearing loss\"])[2]"));
+        hearingloss.click();
+
+        //clicking outside to updatethe previous value
+        Thread.sleep(2000);
+        WebElement outside2=driver.findElement(xpath("//*[@class=\"cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing\"]"));
+        outside2.click();
+
+        //choosing problemstatusdropdown
+        Thread.sleep(3000);
+        WebElement problemstatusdropdown=driver.findElement(xpath("//*[@formcontrolname=\"ProblemStatus\"]"));
+        problemstatusdropdown.click();
+
+        //choosing problemstatus
+        Thread.sleep(3000);
+        WebElement problemstatus=driver.findElement(xpath("//*[text()=\"Func., health\"]"));
+        problemstatus.click();
+
+        //choosing save button
+        Thread.sleep(3000);
+        WebElement save=driver.findElement(xpath("//*[@class=\"custome-button mat-primary schedbtn mat-flat-button mat-button-base\"]"));
+        save.click();
+
+
 
 
 
