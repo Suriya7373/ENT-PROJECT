@@ -1,10 +1,8 @@
 package Login;
 
 import Base.Baseconstructor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-import org.openqa.selenium.By;
+
 public class LoginThroughNewBaseMethod extends Baseconstructor {
     public LoginThroughNewBaseMethod()
     {
@@ -16,14 +14,22 @@ public class LoginThroughNewBaseMethod extends Baseconstructor {
 
         Baseconstructor base=new Baseconstructor();
         LaunchBrowser();
-        driver.get("https://entdemo.eblucare.com");
+//        driver.get("https://entdemo.eblucare.com");
+          driver.get(url);
         base.MaxmimizeWindow();
         //base.ImplictWait(5);
-        base.ClickUsingSendKeys("//*[@id='mat-input-0']","bluehospital@eblucare.com");
-        base.ClickUsingSendKeys("//*[@type='password']","Welcome@123");
+      // base.ClickUsingSendKeys("//*[@id='mat-input-0']","bluehospital@eblucare.com");
+       // base.ClickUsingSendKeys("//*[@type='password']","Welcome@123");
+
         //base.ClickUsingWait("//*[text()=' Sign in ']");
         //base.SleepMethod(1000);
+//
+       base.ClickUsingSendKeys(base.prop.getProperty("username"), "bluehospital@eblucare.com");
+        base.ClickUsingSendKeys(base.prop.getProperty("password"), "Welcome@123");
+//
+////
         base.ClickUsingWait(base.prop.getProperty("signinbtn"));
+
 
     }
 }
