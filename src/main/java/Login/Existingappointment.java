@@ -55,9 +55,10 @@ public  class Existingappointment extends Baseconstructor {
             //todayappointement
             base.ClickUsingWait(base.prop.getProperty("todayappointement"));
           //choosing appointementtime
+           base.SleepMethod(3000);
             base.ClickUsingWait(base.prop.getProperty("choosingappointementtime"));
             //choosingappointementtimetoday
-           base.ClickUsingWait(base.prop.getProperty("choosingappointementtimetoday"));
+        base.ClickUsingWait(base.prop.getProperty("choosingappointementtimetoday"));
             //AppointmentType
            base.ClickUsingWait(base.prop.getProperty("AppointmentType"));
            //choosingappointmenttype

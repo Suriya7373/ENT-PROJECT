@@ -20,19 +20,18 @@ public class LoginThroughNewBaseMethod extends Baseconstructor  {
             this.driver = driver;
      System.out.println("login Constructor");
     }
-
     public void MethodLoginPage()
     {
-
         Baseconstructor base=new Baseconstructor();
         //base.LaunchBrowser();
         driver.get("https://entdemo.eblucare.com");
         base.MaxmimizeWindow();
         //base.ImplictWait(5);
-        //base.SleepMethod(1000);
+        base.SleepMethod(1000);
         base.ClickUsingSendKeys(base.prop.getProperty("username"), "bluehospital@eblucare.com");
         base.ClickUsingSendKeys(base.prop.getProperty("password"), "Welcome@123");
         base.ClickUsingWait(base.prop.getProperty("signinbtn"));
+        base.takeScreenshot("Login");
 
 
     }

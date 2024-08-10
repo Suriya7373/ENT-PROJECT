@@ -1,6 +1,8 @@
 package Login;
 
 import Base.Baseconstructor;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 
 public class PatientvisitModule extends Baseconstructor {
@@ -45,7 +47,29 @@ public class PatientvisitModule extends Baseconstructor {
 
         //clicking on closebutton
         base.SleepMethod(10000);
-        base.ClickUsingWait(base.prop.getProperty("closebutton"));
+
+            int attempts = 0;
+            while(attempts < 3) {
+                try {
+                    base.ClickUsingWait(base.prop.getProperty("closebutton"));
+                    break;
+                } catch(ElementClickInterceptedException e) {
+
+                    attempts++;
+                }
+            }
+        //clicking on closebutton2
+        base.SleepMethod(10000);
+
+        while(attempts < 3) {
+            try {
+        base.ClickUsingWait(base.prop.getProperty("closebutton2"));
+                break;
+            } catch(ElementClickInterceptedException e) {
+
+                attempts++;
+            }
+        }
 
 
 
