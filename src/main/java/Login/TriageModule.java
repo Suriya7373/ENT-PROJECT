@@ -104,7 +104,7 @@ public class TriageModule extends Baseconstructor {
         base.SleepMethod(2000);
         base.ClickUsingSendKeys(base.prop.getProperty("drugname"), "dolo");
         //clicking on drugname
-        base.SleepMethod(2000);
+        base.SleepMethod(5000);
         base.ClickUsingWait(base.prop.getProperty("clickingdrugname"));
         //choosing Route
         base.SleepMethod(2000);
@@ -215,7 +215,7 @@ public class TriageModule extends Baseconstructor {
         //clicking on save button
         base.ClickUsingWait(base.prop.getProperty("save9"));
         //clicking the close button
-        base.SleepMethod(2000);
+        base.SleepMethod(5000);
         base.Click(base.prop.getProperty("close9"));
 
         //Entering username

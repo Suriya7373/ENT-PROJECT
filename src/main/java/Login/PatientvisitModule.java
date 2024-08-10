@@ -57,11 +57,13 @@ public class PatientvisitModule extends Baseconstructor {
         catch (StaleElementReferenceException A){
             System.out.println("error message"+A.getMessage());
         }
-        base.SleepMethod(3000);
-        WebElement closebutton1 = driver.findElement(By.xpath("(//*[text()='Close'])[1]"));
-        closebutton1.click();
-
-
+        base.SleepMethod(5000);
+//        WebElement closebutton1 = driver.findElement(By.xpath("(//*[text()='Close'])[1]"));
+//        closebutton1.click();
+        WebElement closeButton = driver.findElement(By.xpath("(//*[text()='Close'])[1]"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", closeButton);
+        closeButton.click();
 
 
         // clicking on VisitTypedropdown
