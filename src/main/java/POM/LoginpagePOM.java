@@ -1,28 +1,17 @@
 package POM;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import static org.openqa.selenium.By.id;
-import static org.openqa.selenium.By.xpath;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginpagePOM {
 
+    //Entering  username
+          @FindBy(id = "mat-input-0")
+          public static WebElement Entering_mailID;
 
-        //Entering Username,Password, and clicking on Signin
-        public static WebElement username(WebDriver driver) {
-            return  driver.findElement(id("mat-input-0"));
-            //enteringMailId.sendKeys("qasuriya@gmail.com");
-
-        }
-        public static WebElement Password(WebDriver driver) {
-            return driver.findElement(id("mat-input-1"));
-            ////enteringPassword.sendKeys("Endoc@123");
-
-        }
-        public static WebElement Signin(WebDriver driver) {
-            return driver.findElement(xpath("//span[text()=' Sign in ']"));
-            //ClickingSignup.click();
-
-        }
+    //Entering  password
+          @FindBy(id = "mat-input-1")
+          public static WebElement Entering_Password;
+    //clicking on signinbutton
+          @FindBy(xpath = "//*[text()=\" Sign in \"]")
+          public static WebElement Signin;
 }
