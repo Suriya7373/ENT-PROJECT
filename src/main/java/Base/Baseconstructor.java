@@ -38,35 +38,52 @@ public class Baseconstructor {
         driver = new ChromeDriver();
     }
 
-    @Test
-   public void Run() {
-
-        //login page
-        driver = new ChromeDriver();
-
-           LoginThroughNewBaseMethod MethodLoginPage = new LoginThroughNewBaseMethod(driver);
-           MethodLoginPage.MethodLoginPage();
-
-        //put on existing patient appointment
-//           Existingappointment Appointment = new Existingappointment(driver);
-//           Appointment.Appointment();
-           //  calling to Patientvisit
-//             PatientvisitModule Patientvisit = new PatientvisitModule(driver);
-//             Patientvisit.Patientvisit();
+//    @Test(enabled = true)
+//    public void Login() {
+//
+//        //login page
+//        driver = new ChromeDriver();
+//
+//        LoginThroughNewBaseMethod MethodLoginPage = new LoginThroughNewBaseMethod(driver);
+//        MethodLoginPage.MethodLoginPage();  // Login action
+//    }
+//
+//    @Test(enabled = true, dependsOnMethods = {"Login"})
+//    public void Existingappointment() {
+//        Existingappointment Appointment = new Existingappointment(driver);
+//        Appointment.Appointment();  // Perform appointment actions
+//    }
+//             //calling to Patientvisit
+//                @Test(enabled = true, dependsOnMethods = {"Existingappointment"})
+//
+//                public void Patientvisit(){
+//                 PatientvisitModule Patientvisit = new PatientvisitModule(driver);
+//                 Patientvisit.Patientvisit();
+//             }
+//
 //             // calling Triagemodule
-//             TriageModule Triage = new TriageModule(driver);
-//              Triage.Triage();
-//             // consulting module
-//             ConsultingModule Consulting = new ConsultingModule(driver);
-//             Consulting.Consulting();
-             //moving to Audiology
-            AudiologyModule Audiology=new AudiologyModule(driver);
-            Audiology.Audiology();
+//             @Test(enabled = true, dependsOnMethods = {"Patientvisit"})
+//             public void Triagemodule() {
+//                 TriageModule Triage = new TriageModule(driver);
+//                 Triage.Triage();
+//             }
+//             // consultingmodule
+//             @Test(enabled = true, dependsOnMethods = {"Triagemodule"})
+//             public void consultingmodule() {
+//                 ConsultingModule Consulting = new ConsultingModule(driver);
+//                 Consulting.Consulting();
+//             }
+//             //moving to Audiology
+//            @Test(enabled = true, dependsOnMethods = {"consultingmodule"})
+//             public void Audiology() {
+//            AudiologyModule Audiology = new AudiologyModule(driver);
+//             Audiology.Audiology();
+//    }
 
 
 
 
-    }
+
 
     public void Click(String xpath) {
         WebElement element = driver.findElement(By.xpath(xpath));
