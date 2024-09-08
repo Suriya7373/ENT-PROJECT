@@ -44,21 +44,26 @@ public class Baseconstructor {
         //login page
         driver = new ChromeDriver();
 
-        LoginThroughNewBaseMethod MethodLoginPage = new LoginThroughNewBaseMethod(driver);
-        MethodLoginPage.MethodLoginPage();
+           LoginThroughNewBaseMethod MethodLoginPage = new LoginThroughNewBaseMethod(driver);
+           MethodLoginPage.MethodLoginPage();
 
         //put on existing patient appointment
-//              Existingappointment Appointment = new Existingappointment(driver);
-//              Appointment.Appointment();
-             //calling to Patientvisit
+//           Existingappointment Appointment = new Existingappointment(driver);
+//           Appointment.Appointment();
+           //  calling to Patientvisit
 //             PatientvisitModule Patientvisit = new PatientvisitModule(driver);
 //             Patientvisit.Patientvisit();
 //             // calling Triagemodule
 //             TriageModule Triage = new TriageModule(driver);
 //              Triage.Triage();
-             // consulting module
-             ConsultingModule Consulting = new ConsultingModule(driver);
-             Consulting.Consulting();
+//             // consulting module
+//             ConsultingModule Consulting = new ConsultingModule(driver);
+//             Consulting.Consulting();
+             //moving to Audiology
+            AudiologyModule Audiology=new AudiologyModule(driver);
+            Audiology.Audiology();
+
+
 
 
     }
